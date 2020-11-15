@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    border-bottom: 2px solid black;
+    margin: 0px;
+    padding: 10px;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 0px;
+}
+
+.content .content-list {
+    border-right: 2px solid black;
+    margin-top: 0px;
+    margin-right: 5px;
+    padding-right: 10px;
+}
+
+.content-article {
+    margin-top: 0px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    margin: 0;
+}
