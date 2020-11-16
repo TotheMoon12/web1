@@ -22,10 +22,30 @@ h2 {
 
 .content-article {
     margin-top: 0px;
+    padding-left: 20px;
 }
 
 .content {
     display: grid;
     grid-template-columns: 150px 1fr;
     margin: 0;
+}
+
+/* 화면의 크기에 따라 반응하게 하는 반응형 웹을 위한것이 미디어 쿼리 */
+@media(max-width:800px)
+{
+    .content {
+        display: block;
+    }
+
+    .content .content-list {
+        border-right: none;
+        margin-top: 0px;
+        margin-right: 5px;
+        padding-right: 10px;
+    }
+
+    h1 {
+        border-bottom: none;
+    }
 }
