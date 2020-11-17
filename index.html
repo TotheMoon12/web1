@@ -7,10 +7,40 @@
     <title>WEB - Welcome</title> <!-- 제목 태그 -->
     <meta charset="utf-8"> <!-- 문서가 utf-8방식으로 저장됨을 의미 -->
     <link rel="stylesheet" href="styles.css" />
+    <script>
+        function toggle(self) {
+            var target = document.querySelector('body');
+            var contentList = document.querySelectorAll('a');
+            if (self.value === 'night') // this는 자신의 태그를 가르킨다.
+            {
+                self.value = 'day';
+                target.style.backgroundColor = 'black';
+                target.style.color = 'white';
+                for (var i = 0; i < contentList.length; ++i) {
+                    contentList[i].style.color = 'powderblue';
+                }
+            }
+            else {
+                self.value = 'night';
+                target.style.backgroundColor = 'white';
+                target.style.color = 'black';
+                for (var i = 0; i < contentList.length; ++i) {
+                    contentList[i].style.color = 'blue';
+                }
+            }
+        }
+    </script>
 </head>
 
 <body>
     <h1><a href="index.html">WEB</a></h1>
+    <input type="button" value="night" onclick="
+        document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('body').style.color='white';">
+    <input type="button" value="day" onclick="
+        document.querySelector('body').style.backgroundColor='white';
+        document.querySelector('body').style.color='black';">
+    <input id="toggle" type="button" value="night" onclick="toggle(this);">
     <div class="content">
         <ol class="content-list">
             <li><a href="1.html">HTML</li></a>
